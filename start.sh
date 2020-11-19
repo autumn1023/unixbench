@@ -1,3 +1,4 @@
+#!/bin/bash
 podname=`hostname`
 if [ ! -d /data/docker_upload ];then
 mkdir -p /data/docker_upload
@@ -7,5 +8,3 @@ if [ -d /app/UnixBench/results ];then
 rm /app/UnixBench/results -rf 
 ln -sv /data/docker_upload/$podname /app/UnixBench/results
 fi
-
-/usr/bin/perl -w /app/UnixBench/Run -c 1 -c 4
