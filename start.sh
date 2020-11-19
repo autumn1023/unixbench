@@ -1,10 +1,10 @@
-#!/bin/bash
-podname=`hostname`
-if [ ! -d /data/docker_upload ];then
+#! /usr/bin/perl
+exec(podname=`hostname`)
+exec(if [ ! -d /data/docker_upload ];then
 mkdir -p /data/docker_upload
-fi
+fi)
 
-if [ -d /app/UnixBench/results ];then
+exec(if [ -d /app/UnixBench/results ];then
 rm /app/UnixBench/results -rf 
 ln -sv /data/docker_upload/$podname /app/UnixBench/results
-fi
+fi)
