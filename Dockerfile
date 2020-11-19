@@ -8,5 +8,8 @@ RUN apt-get update && \
 
 RUN mkdir -p /app && curl -LsS http://byte-unixbench.googlecode.com/files/UnixBench5.1.3.tgz | tar -zxf - -C /app && chmod +x /app/UnixBench/Run
 WORKDIR /app/UnixBench
+ADD start.sh /
 
-ENTRYPOINT ["/app/UnixBench/Run"]
+RUN chmod 775 /start.sh
+
+ENTRYPOINT ["/start.sh"]
