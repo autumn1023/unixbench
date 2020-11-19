@@ -8,4 +8,4 @@ rm /app/UnixBench/results -rf
 ln -sv /data/docker_upload/$podname /app/UnixBench/results
 fi
 
-/app/UnixBench/Run -c 1 -c 4
+/usr/bin/perl -w /app/UnixBench/Run -c 1 -c 4
