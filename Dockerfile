@@ -15,4 +15,4 @@ ADD start.sh /
 
 RUN chmod 775 /start.sh
 
-ENTRYPOINT ["/start.sh"]
+CMD ["/start.sh"]
